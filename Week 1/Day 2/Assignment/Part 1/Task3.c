@@ -2,6 +2,7 @@
 
 int main()
 {// check nth bit
+    
     signed int num = 0;
     unsigned int bit = 0;
 
@@ -10,7 +11,7 @@ int main()
 
     printf("Enter nth bit to check (0-31): ");
     scanf("%d", &bit);
-    
+
     while (bit > 31 || bit < 0)
     {
         printf("Invalid input. Please enter a number between 0 and 31: ");

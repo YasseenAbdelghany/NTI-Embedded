@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdio.h>
 
 int main()
-{ // set nth bit
+{ // clear nth bit
 
     signed int num = 0;
     unsigned int bit = 0;
@@ -18,7 +19,7 @@ int main()
         scanf("%u", &bit);
     }
 
-    num = num | (1 << bit);
+    num = num & (~(1 << bit));
 
     printf("Number after setting bit %u: %d\n", bit, num);
 
