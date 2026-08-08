@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main()
-{
-    signed int num;
+{ // check most significant bit
+
+    signed int num = 0;
    
     printf("Enter a number: ");
     scanf("%d", &num);
