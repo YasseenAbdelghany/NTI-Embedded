@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main()
-{ // profit or loss
+{// profit or loss
 
     unsigned int costPrice = 0;
     unsigned int sellingPrice = 0;
