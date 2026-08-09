@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main()
-{// minimum number of notes
+{ // minimum number of notes
     int amount = 0;
 
     printf("Enter amount: ");
