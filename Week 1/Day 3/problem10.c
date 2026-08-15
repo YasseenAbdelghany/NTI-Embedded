@@ -3,12 +3,14 @@
 
 int main(void)
 {
-    /* Write a C program to declare, initialize, input elements
-       in array and print array. */
+    /* Write a C program to identify missing numbers in a given array. */
 
     int arr[100] = {0};
     int size = 0;
     int i = 0;
+    int j = 0;
+    int missing = 0;
+    int found = 0;
     char Program_State = '\0';
 
     do
@@ -18,22 +20,31 @@ int main(void)
         printf("\nEnter size of array: ");
         scanf("%d", &size);
 
-        printf("Enter %d elements in the array: ", size);
+        printf("Enter elements into array: ");
 
         for (i = 0; i < size; i++)
         {
             scanf("%d", &arr[i]);
         }
 
-        printf("\nElements in array are: ");
+        printf("\nMissing element is: ");
 
-        for (i = 0; i < size; i++)
+        for (missing = 1; missing <= size + 1; missing++)
         {
-            printf("%d", arr[i]);
+            found = 0;
 
-            if (i < (size - 1))
+            for (j = 0; j < size; j++)
             {
-                printf(", ");
+                if (arr[j] == missing)
+                {
+                    found = 1;
+                    break;
+                }
+            }
+
+            if (found == 0)
+            {
+                printf("%d ", missing);
             }
         }
 

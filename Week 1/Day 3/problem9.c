@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    /* Write a C program to declare, initialize, input elements
-       in array and print array. */
+    /* Write a C program to print the alternate elements
+       in an array. */
 
     int arr[100] = {0};
     int size = 0;
@@ -15,26 +15,21 @@ int main(void)
     {
         system("cls"); // Clear the console screen (Windows)
 
-        printf("\nEnter size of array: ");
+        printf("\nEnter the size of the array: ");
         scanf("%d", &size);
 
-        printf("Enter %d elements in the array: ", size);
+        printf("Enter the elements of an array:\n");
 
         for (i = 0; i < size; i++)
         {
             scanf("%d", &arr[i]);
         }
 
-        printf("\nElements in array are: ");
+        printf("\nAlternate elements of a given array are: ");
 
-        for (i = 0; i < size; i++)
+        for (i = 0; i < size; i = i + 2)
         {
-            printf("%d", arr[i]);
-
-            if (i < (size - 1))
-            {
-                printf(", ");
-            }
+            printf("%d ", arr[i]);
         }
 
         printf("\n\nPress E to exit or any other key to continue: ");
